@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import <Parse/Parse.h>
 
 @interface AppDelegate ()
 
@@ -16,7 +17,44 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    /* ----- parse init----- */
+    // [Optional] Power your app with Local Datastore. For more info, go to
+    // https://parse.com/docs/ios_guide#localdatastore/iOS
+    [Parse enableLocalDatastore];
+    
+    // Initialize Parse.
+    [Parse setApplicationId:@"fHEHoKfaIUSbquVGCOvu0qbPxcEu3sX9ZllgkxYH"
+                  clientKey:@"cwPtaJQW1LrsCtUR8atGcg2K7447akyDEDrUBwYP"];
+    
+    // [Optional] Track statistics around application opens.
+    [PFAnalytics trackAppOpenedWithLaunchOptions:launchOptions];
     // Override point for customization after application launch.
+     /* ----- parse init----- */
+    
+    /* ----- plist local storage init ----- */
+    //plist - move to document
+    NSFileManager *fm = [[NSFileManager alloc] init];
+    
+    NSString *src = [[NSBundle mainBundle] pathForResource:@"cardmemory" ofType:@"plist"];
+    NSString *dst = [NSString stringWithFormat:@"%@/Documents/cardmemory.plist", NSHomeDirectory()];
+    if (![fm fileExistsAtPath:dst]){
+        [fm copyItemAtPath:src toPath:dst error:nil];
+    }
+    
+    //change nagvigation bar color
+    [[UINavigationBar appearance] setBarTintColor:[UIColor colorWithRed:(0/255.f) green:(170/255.f) blue:(193/255.f) alpha:(1.0f)]];
+    // This sets the text color of the navigation links
+    [[UINavigationBar appearance] setTintColor:[UIColor whiteColor]];
+    // This sets the title color of the navigation bar
+    [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
+    //change tab bar color
+    [[UITabBar appearance] setBarTintColor:[UIColor colorWithRed:(0/255.f) green:(72/255.f) blue:(82/255.f) alpha:(1.0f)]];
+    //set tab bar icon SELECTED color
+    [[UITabBar appearance] setTintColor:[UIColor colorWithRed:(164/255.f) green:(208/255.f) blue:(2/255.f) alpha:(1.0f)]];
+    //set tab bar text UNSELECETED color
+    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}forState:UIControlStateNormal];
+    //set tab bar text SELECTED color
+    [UITabBarItem.appearance setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor colorWithRed:(164/255.f) green:(208/255.f) blue:(2/255.f) alpha:(1.0f)]}forState:UIControlStateSelected];
     return YES;
 }
 
