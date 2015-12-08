@@ -1,0 +1,123 @@
+
+/* Class = "UILabel"; text = "您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。\nCasear清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。\n\nCasear不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。Casear亦不保証軟體及硬體中的任何錯誤都將得到更正。\n\nCasear不保証經由或透過本應用程式購買或取得之任何商品及服務之結果。\n\nCasear不負責，亦不承擔任何一切因使用本應用程式而引致之任何意外、錯誤、遺漏、疏忽、干擾、經傳送或接收的錯誤、因下載而感染電腦病毒、誹謗、合約毀壞、版權或知識產權侵犯及所造成的任何損失。\n\nCasear不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償（即使Caesar已被告知前開賠償之可能性亦然）。\n\n本應用程式有包含第三者張貼之內容。而該內容未經Casear審批。Casear對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何Casear之意見。"; ObjectID = "0ME-OG-wLt"; */
+"0ME-OG-wLt.text" = "您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。\nCasear清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。\n\nCasear不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。Casear亦不保証軟體及硬體中的任何錯誤都將得到更正。\n\nCasear不保証經由或透過本應用程式購買或取得之任何商品及服務之結果。\n\nCasear不負責，亦不承擔任何一切因使用本應用程式而引致之任何意外、錯誤、遺漏、疏忽、干擾、經傳送或接收的錯誤、因下載而感染電腦病毒、誹謗、合約毀壞、版權或知識產權侵犯及所造成的任何損失。\n\nCasear不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償（即使Caesar已被告知前開賠償之可能性亦然）。\n\n本應用程式有包含第三者張貼之內容。而該內容未經Casear審批。Casear對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何Casear之意見。";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "79J-Lw-ifd"; */
+"79J-Lw-ifd.headerTitle" = " ";
+
+/* Class = "UINavigationItem"; title = "新增信用卡"; ObjectID = "AgV-cv-xx5"; */
+"AgV-cv-xx5.title" = "新增信用卡";
+
+/* Class = "UILabel"; text = "倘若有任何疑問，歡迎以電郵方式聯絡我們："; ObjectID = "D02-Kk-MoI"; */
+"D02-Kk-MoI.text" = "倘若有任何疑問，歡迎以電郵方式聯絡我們：";
+
+/* Class = "UIBarButtonItem"; title = "編輯"; ObjectID = "EVY-fF-FWn"; */
+"EVY-fF-FWn.title" = "編輯";
+
+/* Class = "UISegmentedControl"; FXc-Ye-ND7.segmentTitles[0] = "香港島"; ObjectID = "FXc-Ye-ND7"; */
+"FXc-Ye-ND7.segmentTitles[0]" = "香港島";
+
+/* Class = "UISegmentedControl"; FXc-Ye-ND7.segmentTitles[1] = "九龍"; ObjectID = "FXc-Ye-ND7"; */
+"FXc-Ye-ND7.segmentTitles[1]" = "九龍";
+
+/* Class = "UISegmentedControl"; FXc-Ye-ND7.segmentTitles[2] = "新界"; ObjectID = "FXc-Ye-ND7"; */
+"FXc-Ye-ND7.segmentTitles[2]" = "新界";
+
+/* Class = "UILabel"; text = "沒有相關信用卡優惠"; ObjectID = "HgH-Zc-1uw"; */
+"HgH-Zc-1uw.text" = "沒有相關信用卡優惠";
+
+/* Class = "UITextField"; placeholder = "搜尋：餐廳名稱、地址"; ObjectID = "Izr-xk-uTg"; */
+"Izr-xk-uTg.placeholder" = "搜尋：餐廳名稱、地址";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "KZY-nW-BH5"; */
+"KZY-nW-BH5.headerTitle" = " ";
+
+/* Class = "UINavigationItem"; title = "信用卡列表"; ObjectID = "MCj-vw-3fx"; */
+"MCj-vw-3fx.title" = "信用卡列表";
+
+/* Class = "UIBarButtonItem"; title = "搜尋"; ObjectID = "Nq5-pa-0El"; */
+"Nq5-pa-0El.title" = "搜尋";
+
+/* Class = "UITextField"; text = "搜尋：地區、餐廳名稱、地址"; ObjectID = "P0o-Ut-1yS"; */
+"P0o-Ut-1yS.text" = "搜尋：地區、餐廳名稱、地址";
+
+/* Class = "UILabel"; text = "cs@cardshk.com"; ObjectID = "RwZ-EF-ykR"; */
+"RwZ-EF-ykR.text" = "cs@cardshk.com";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[0] = "所有菜式"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[0]" = "所有菜式";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[1] = "酒店"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[1]" = "酒店";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[2] = "中菜"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[2]" = "中菜";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[3] = "亞洲菜"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[3]" = "亞洲菜";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[4] = "日本菜"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[4]" = "日本菜";
+
+/* Class = "UISegmentedControl"; S2C-ty-ggP.segmentTitles[5] = "其他"; ObjectID = "S2C-ty-ggP"; */
+"S2C-ty-ggP.segmentTitles[5]" = "其他";
+
+/* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "U91-6a-f0T"; */
+"U91-6a-f0T.headerTitle" = " ";
+
+/* Class = "UILabel"; text = "沒有\"我的收藏\""; ObjectID = "V54-7g-jq7"; */
+"V54-7g-jq7.text" = "沒有\"我的收藏\"";
+
+/* Class = "UILabel"; text = "適用的信用卡"; ObjectID = "VYJ-aT-jOv"; */
+"VYJ-aT-jOv.text" = "適用的信用卡";
+
+/* Class = "UILabel"; text = "資訊下載中..."; ObjectID = "YL9-8h-uvm"; */
+"YL9-8h-uvm.text" = "資訊下載中...";
+
+/* Class = "UILabel"; text = "z"; ObjectID = "YUV-bK-xhq"; */
+"YUV-bK-xhq.text" = "z";
+
+/* Class = "UITabBarItem"; title = "餐飲優惠"; ObjectID = "ZsO-y3-AyO"; */
+"ZsO-y3-AyO.title" = "餐飲優惠";
+
+/* Class = "UILabel"; text = "版本 : 1.0 Build 130"; ObjectID = "d55-Ba-hnu"; */
+"d55-Ba-hnu.text" = "版本 : 1.0 Build 130";
+
+/* Class = "UITabBarItem"; title = "我的收藏"; ObjectID = "e67-EC-E0J"; */
+"e67-EC-E0J.title" = "我的收藏";
+
+/* Class = "UITabBarItem"; title = "信用卡列表"; ObjectID = "gJT-Nl-ept"; */
+"gJT-Nl-ept.title" = "信用卡列表";
+
+/* Class = "UILabel"; text = "免責聲明"; ObjectID = "hs2-fK-3Am"; */
+"hs2-fK-3Am.text" = "免責聲明";
+
+/* Class = "UILabel"; text = "制定 你獨有的優惠列表"; ObjectID = "jkP-Gi-cD1"; */
+"jkP-Gi-cD1.text" = "制定 你獨有的優惠列表";
+
+/* Class = "UINavigationItem"; title = "新增信用卡"; ObjectID = "kQy-Xu-s45"; */
+"kQy-Xu-s45.title" = "新增信用卡";
+
+/* Class = "UILabel"; text = "All contents copyright 2015. All Rights reserved."; ObjectID = "lRb-Ip-qUF"; */
+"lRb-Ip-qUF.text" = "All contents copyright 2015. All Rights reserved.";
+
+/* Class = "UIBarButtonItem"; title = "搜尋"; ObjectID = "lsc-o9-fQj"; */
+"lsc-o9-fQj.title" = "搜尋";
+
+/* Class = "UIBarButtonItem"; title = "儲存"; ObjectID = "n8e-PD-R6q"; */
+"n8e-PD-R6q.title" = "儲存";
+
+/* Class = "UINavigationItem"; title = "餐飲優惠"; ObjectID = "nTv-Tb-HLP"; */
+"nTv-Tb-HLP.title" = "餐飲優惠";
+
+/* Class = "UIButton"; normalTitle = "關於我們"; ObjectID = "oGN-Ke-1p8"; */
+"oGN-Ke-1p8.normalTitle" = "關於我們";
+
+/* Class = "UILabel"; text = "Title"; ObjectID = "rqE-nE-u6f"; */
+"rqE-nE-u6f.text" = "Title";
+
+/* Class = "UILabel"; text = "選擇銀行"; ObjectID = "tqo-HJ-PUm"; */
+"tqo-HJ-PUm.text" = "選擇銀行";
+
+/* Class = "UILabel"; text = "添加 信用卡"; ObjectID = "wUF-V2-G02"; */
+"wUF-V2-G02.text" = "添加 信用卡";
