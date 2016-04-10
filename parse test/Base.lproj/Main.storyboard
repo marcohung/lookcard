@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JbZ-28-eQo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JbZ-28-eQo">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
-        <!--信用卡列表-->
+        <!--Credit Card List-->
         <scene sceneID="Rog-Y2-uKc">
             <objects>
-                <viewController id="gdA-YO-94J" customClass="ShowExistingCard" sceneMemberID="viewController">
+                <viewController title="Credit Card List" id="gdA-YO-94J" customClass="ShowExistingCard" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cBg-UO-ldi"/>
                         <viewControllerLayoutGuide type="bottom" id="2iC-Hu-Qoo"/>
@@ -20,11 +20,9 @@
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="tablebackground" translatesAutoresizingMaskIntoConstraints="NO" id="uw7-OM-Npb">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="qLC-HW-gL6">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="BSJ-P7-Nzn">
@@ -33,36 +31,22 @@
                                     <subviews>
                                         <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wallet" translatesAutoresizingMaskIntoConstraints="NO" id="teY-lO-k1v">
                                             <rect key="frame" x="142" y="177" width="90" height="90"/>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" constant="90" id="AMO-Oi-P51"/>
-                                                <constraint firstAttribute="height" constant="90" id="kWA-c0-4r6"/>
+                                                <constraint firstAttribute="width" constant="90" id="0lk-KK-TQf"/>
+                                                <constraint firstAttribute="height" constant="90" id="EoU-wX-2td"/>
                                             </constraints>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="制定 你獨有的優惠列表" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-Gi-cD1">
-                                            <rect key="frame" x="116" y="148" width="143" height="21"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" constant="143" id="5Id-qy-ldt"/>
-                                                <constraint firstAttribute="height" constant="21" id="wcw-tb-3JF"/>
-                                            </constraints>
-                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="QrM-B1-IFb">
                                             <rect key="frame" x="-6" y="32" width="381" height="70"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="black_add" translatesAutoresizingMaskIntoConstraints="NO" id="LnB-fh-vgc">
                                                     <rect key="frame" x="174" y="19" width="32" height="32"/>
-                                                    <animations/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="32" id="Jcm-yC-nQD"/>
+                                                        <constraint firstAttribute="width" constant="32" id="QbN-Xs-Mdg"/>
                                                     </constraints>
                                                 </imageView>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WR6-qo-75o">
                                                     <rect key="frame" x="0.0" y="0.0" width="381" height="70"/>
-                                                    <animations/>
                                                     <state key="normal">
                                                         <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -71,16 +55,15 @@
                                                     </connections>
                                                 </button>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" red="0.58039215686274515" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <constraints>
-                                                <constraint firstItem="LnB-fh-vgc" firstAttribute="centerY" secondItem="WR6-qo-75o" secondAttribute="centerY" id="5os-e4-DUy"/>
-                                                <constraint firstAttribute="bottom" secondItem="WR6-qo-75o" secondAttribute="bottom" id="7hc-oO-7gD"/>
-                                                <constraint firstItem="WR6-qo-75o" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="top" id="Sex-xJ-MUg"/>
-                                                <constraint firstAttribute="trailing" secondItem="WR6-qo-75o" secondAttribute="trailing" id="VuX-6r-RLh"/>
-                                                <constraint firstItem="WR6-qo-75o" firstAttribute="centerX" secondItem="LnB-fh-vgc" secondAttribute="centerX" id="Whj-NI-k1e"/>
-                                                <constraint firstItem="LnB-fh-vgc" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="top" constant="19" id="nvP-AU-RDf"/>
-                                                <constraint firstItem="WR6-qo-75o" firstAttribute="leading" secondItem="QrM-B1-IFb" secondAttribute="leading" id="uRx-8r-t8c"/>
+                                                <constraint firstItem="LnB-fh-vgc" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="top" constant="19" id="3JL-wI-x7M"/>
+                                                <constraint firstItem="WR6-qo-75o" firstAttribute="centerY" secondItem="LnB-fh-vgc" secondAttribute="centerY" id="9fz-wp-bT4"/>
+                                                <constraint firstAttribute="trailing" secondItem="WR6-qo-75o" secondAttribute="trailing" id="CAC-sm-j6L"/>
+                                                <constraint firstItem="WR6-qo-75o" firstAttribute="leading" secondItem="QrM-B1-IFb" secondAttribute="leading" id="Wmc-mt-6je"/>
+                                                <constraint firstAttribute="bottom" secondItem="WR6-qo-75o" secondAttribute="bottom" id="chw-4c-EJv"/>
+                                                <constraint firstItem="WR6-qo-75o" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="top" id="fkb-nq-1NC"/>
+                                                <constraint firstItem="WR6-qo-75o" firstAttribute="centerX" secondItem="LnB-fh-vgc" secondAttribute="centerX" id="vL9-75-2cq"/>
                                             </constraints>
                                         </view>
                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HL3-AL-Mtp">
@@ -88,67 +71,66 @@
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="z" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YUV-bK-xhq">
                                                     <rect key="frame" x="15" y="5" width="300" height="21"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="leading" secondItem="HL3-AL-Mtp" secondAttribute="leading" constant="15" id="3CE-9o-Mr1"/>
-                                                <constraint firstAttribute="trailing" secondItem="YUV-bK-xhq" secondAttribute="trailing" constant="60" id="Q5p-4U-vfg"/>
-                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="centerY" secondItem="HL3-AL-Mtp" secondAttribute="centerY" id="TSB-tj-kfN"/>
-                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="top" secondItem="HL3-AL-Mtp" secondAttribute="top" constant="5" id="u9v-9m-0zu"/>
+                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="centerY" secondItem="HL3-AL-Mtp" secondAttribute="centerY" id="1ru-9s-wBg"/>
+                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="leading" secondItem="HL3-AL-Mtp" secondAttribute="leading" constant="15" id="9Bt-8S-3KK"/>
+                                                <constraint firstItem="YUV-bK-xhq" firstAttribute="top" secondItem="HL3-AL-Mtp" secondAttribute="top" constant="5" id="lMc-u7-34l"/>
+                                                <constraint firstAttribute="trailing" secondItem="YUV-bK-xhq" secondAttribute="trailing" constant="60" id="nYZ-hW-dEe"/>
                                             </constraints>
                                         </view>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加 信用卡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUF-V2-G02">
-                                            <rect key="frame" x="139" y="124" width="90" height="21"/>
-                                            <animations/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Credit Card" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wUF-V2-G02">
+                                            <rect key="frame" x="118" y="127" width="133" height="21"/>
                                             <constraints>
-                                                <constraint firstAttribute="height" constant="21" id="CKv-Ue-CTu"/>
-                                                <constraint firstAttribute="width" constant="90" id="rC9-1I-Ajp"/>
+                                                <constraint firstAttribute="width" constant="133" id="Ri1-v1-Jkg"/>
                                             </constraints>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                             <nil key="highlightedColor"/>
                                         </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oGN-Ke-1p8">
-                                            <rect key="frame" x="160" y="301" width="50" height="26"/>
-                                            <animations/>
-                                            <constraints>
-                                                <constraint firstAttribute="height" constant="26" id="PhL-uS-sdl"/>
-                                                <constraint firstAttribute="width" constant="50" id="Q30-HW-Tgi"/>
-                                            </constraints>
+                                            <rect key="frame" x="160" y="300" width="50" height="27"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                            <state key="normal" title="關於我們">
+                                            <state key="normal" title="about us">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                             </state>
                                             <connections>
                                                 <segue destination="Ovi-zp-tfp" kind="show" id="j3Q-eq-4ee"/>
                                             </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="tailor made for list" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jkP-Gi-cD1">
+                                            <rect key="frame" x="127" y="148" width="114" height="21"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="114" id="Vtx-bg-uYg"/>
+                                                <constraint firstAttribute="height" constant="21" id="gtd-gX-P3g"/>
+                                            </constraints>
+                                            <fontDescription key="fontDescription" type="system" pointSize="13"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="0.35999999999999999" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstAttribute="bottom" secondItem="oGN-Ke-1p8" secondAttribute="bottom" id="0hU-g7-sPI"/>
-                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="trailing" secondItem="QrM-B1-IFb" secondAttribute="trailing" id="0rM-xs-DJs"/>
-                                        <constraint firstItem="wUF-V2-G02" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="bottom" constant="22" id="3SL-J9-cfY"/>
-                                        <constraint firstItem="wUF-V2-G02" firstAttribute="centerX" secondItem="QrM-B1-IFb" secondAttribute="centerX" id="9vM-cB-xQB"/>
-                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="top" secondItem="HL3-AL-Mtp" secondAttribute="bottom" id="IsE-hz-3vN"/>
-                                        <constraint firstItem="teY-lO-k1v" firstAttribute="top" secondItem="jkP-Gi-cD1" secondAttribute="bottom" constant="8" symbolic="YES" id="PHc-1a-qcc"/>
-                                        <constraint firstItem="teY-lO-k1v" firstAttribute="centerX" secondItem="jkP-Gi-cD1" secondAttribute="centerX" id="PNe-jY-ujS"/>
-                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="centerX" secondItem="jkP-Gi-cD1" secondAttribute="centerX" id="bXw-5e-Def"/>
-                                        <constraint firstItem="oGN-Ke-1p8" firstAttribute="top" secondItem="teY-lO-k1v" secondAttribute="bottom" constant="34" id="dnT-lI-34j"/>
-                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="centerX" secondItem="oGN-Ke-1p8" secondAttribute="centerX" id="ezX-BH-y3p"/>
-                                        <constraint firstAttribute="trailing" secondItem="QrM-B1-IFb" secondAttribute="trailing" id="fdP-m4-fKJ"/>
-                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="leading" secondItem="BSJ-P7-Nzn" secondAttribute="leading" constant="-6" id="fdf-yV-kIN"/>
-                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="leading" secondItem="BSJ-P7-Nzn" secondAttribute="leading" id="n7A-WN-NuE"/>
-                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="top" secondItem="BSJ-P7-Nzn" secondAttribute="top" id="q3R-de-yPl"/>
-                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="top" secondItem="BSJ-P7-Nzn" secondAttribute="top" constant="32" id="qyy-Qc-0zy"/>
-                                        <constraint firstItem="jkP-Gi-cD1" firstAttribute="top" secondItem="wUF-V2-G02" secondAttribute="bottom" constant="3" id="wE8-0V-VvI"/>
+                                        <constraint firstItem="jkP-Gi-cD1" firstAttribute="top" secondItem="wUF-V2-G02" secondAttribute="bottom" id="0Eg-64-GOp"/>
+                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="trailing" secondItem="QrM-B1-IFb" secondAttribute="trailing" id="1dS-Kl-CF1"/>
+                                        <constraint firstItem="wUF-V2-G02" firstAttribute="centerX" secondItem="oGN-Ke-1p8" secondAttribute="centerX" id="Fvf-Dd-bio"/>
+                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="leading" secondItem="BSJ-P7-Nzn" secondAttribute="leading" id="GdC-4y-JeF"/>
+                                        <constraint firstItem="wUF-V2-G02" firstAttribute="centerX" secondItem="jkP-Gi-cD1" secondAttribute="centerX" id="Jcp-Gd-U81"/>
+                                        <constraint firstItem="wUF-V2-G02" firstAttribute="top" secondItem="QrM-B1-IFb" secondAttribute="bottom" constant="25" id="KdX-J6-KjC"/>
+                                        <constraint firstItem="oGN-Ke-1p8" firstAttribute="top" secondItem="teY-lO-k1v" secondAttribute="bottom" constant="33" id="Loy-Br-OR1"/>
+                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="top" secondItem="BSJ-P7-Nzn" secondAttribute="top" id="WaR-eM-1fV"/>
+                                        <constraint firstItem="teY-lO-k1v" firstAttribute="top" secondItem="jkP-Gi-cD1" secondAttribute="bottom" constant="8" symbolic="YES" id="eKz-fK-WRl"/>
+                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="top" secondItem="HL3-AL-Mtp" secondAttribute="bottom" id="h0d-Et-U8f"/>
+                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="centerX" secondItem="wUF-V2-G02" secondAttribute="centerX" id="oIO-3J-unp"/>
+                                        <constraint firstAttribute="bottom" secondItem="oGN-Ke-1p8" secondAttribute="bottom" id="pNW-uM-zE3"/>
+                                        <constraint firstItem="QrM-B1-IFb" firstAttribute="leading" secondItem="BSJ-P7-Nzn" secondAttribute="leading" constant="-6" id="u6n-5F-HXE"/>
+                                        <constraint firstAttribute="trailing" secondItem="HL3-AL-Mtp" secondAttribute="trailing" id="wZg-4s-5Ec"/>
+                                        <constraint firstItem="HL3-AL-Mtp" firstAttribute="centerX" secondItem="teY-lO-k1v" secondAttribute="centerX" id="z38-RD-aze"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -158,9 +140,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="F40-jG-D3g" id="UmL-f6-wTT">
                                             <rect key="frame" x="0.0" y="0.0" width="342" height="68.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <segue destination="c6x-JL-qhY" kind="show" identifier="show_existcard_details" id="8Kp-ee-QBr"/>
@@ -176,7 +156,6 @@
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="uw7-OM-Npb" firstAttribute="leading" secondItem="qS7-mY-I75" secondAttribute="leading" id="1W0-2p-8Ao"/>
@@ -189,8 +168,8 @@
                             <constraint firstItem="qLC-HW-gL6" firstAttribute="top" secondItem="qS7-mY-I75" secondAttribute="top" id="xGn-AX-Yei"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="信用卡列表" id="MCj-vw-3fx">
-                        <barButtonItem key="leftBarButtonItem" title="編輯" id="EVY-fF-FWn">
+                    <navigationItem key="navigationItem" title="Credit Card List" id="MCj-vw-3fx">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="EVY-fF-FWn">
                             <connections>
                                 <action selector="editbuttonz:" destination="gdA-YO-94J" id="xh4-yp-yT9"/>
                             </connections>
@@ -215,7 +194,6 @@
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="static" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="yod-Zl-Wb3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <sections>
                             <tableViewSection headerTitle=" " id="U91-6a-f0T">
@@ -230,15 +208,12 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="倘若有任何疑問，歡迎以電郵方式聯絡我們：" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="D02-Kk-MoI">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="34.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="RwZ-EF-ykR" rowHeight="35" style="IBUITableViewCellStyleDefault" id="VDC-iU-GfG">
                                         <rect key="frame" x="0.0" y="57" width="375" height="35"/>
@@ -250,15 +225,12 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="cs@cardshk.com" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="RwZ-EF-ykR">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="34.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -274,15 +246,12 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="免責聲明" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hs2-fK-3Am">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="29.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="boldSystem" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="0ME-OG-wLt" rowHeight="495" style="IBUITableViewCellStyleDefault" id="FEf-zI-4Tj">
                                         <rect key="frame" x="0.0" y="144" width="375" height="495"/>
@@ -294,7 +263,6 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ME-OG-wLt">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="494.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <string key="text">您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。
 CoCo Production清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。
 
@@ -313,9 +281,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -328,18 +294,15 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="版本 : 1.0.11 Build 111" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d55-Ba-hnu">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="版本 : 1.0.16 Build 116" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d55-Ba-hnu">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="29.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="lRb-Ip-qUF" rowHeight="50" style="IBUITableViewCellStyleDefault" id="oFi-ET-Wf9">
                                         <rect key="frame" x="0.0" y="691" width="375" height="50"/>
@@ -351,15 +314,12 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="All contents copyright 2015. All Rights reserved." lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="lRb-Ip-qUF">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="49.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -388,7 +348,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMy-Ya-bdn">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="0.0" width="600" height="687"/>
@@ -396,10 +355,8 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="9sh-8k-LkQ">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <animations/>
                             </activityIndicatorView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="centerY" secondItem="9sh-8k-LkQ" secondAttribute="centerY" id="2Yc-7y-fkq"/>
@@ -468,21 +425,19 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="bordered" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="FXc-Ye-ND7">
                                 <rect key="frame" x="13" y="48" width="350" height="29"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <segments>
-                                    <segment title="香港島"/>
-                                    <segment title="九龍"/>
-                                    <segment title="新界"/>
+                                    <segment title="HK Island"/>
+                                    <segment title="Kowloon"/>
+                                    <segment title="N.T."/>
                                 </segments>
                                 <color key="tintColor" red="0.42352941176470588" green="0.81960784313725488" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <connections>
                                     <action selector="segmentchange:" destination="RTq-l9-T64" eventType="valueChanged" id="Zn1-gi-Ru0"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="搜尋：餐廳名稱、地址" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Izr-xk-uTg">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Search: name , address" textAlignment="center" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Izr-xk-uTg">
                                 <rect key="frame" x="13" y="10" width="350" height="30"/>
-                                <animations/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="4pw-98-Wnz"/>
@@ -506,7 +461,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yCc-ft-Wl7">
                                 <rect key="frame" x="0.0" y="92" width="375" height="462"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="hki" textLabel="rqE-nE-u6f" style="IBUITableViewCellStyleDefault" id="0kY-EF-b6L">
@@ -519,15 +473,12 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqE-nE-u6f">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <animations/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </prototypes>
                                 <sections/>
@@ -540,7 +491,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.96529750631313127" green="0.96529750631313127" blue="0.96529750631313127" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="yCc-ft-Wl7" firstAttribute="centerX" secondItem="FXc-Ye-ND7" secondAttribute="centerX" id="FpV-A9-bId"/>
@@ -556,7 +506,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="whF-vG-OFv">
-                        <barButtonItem key="rightBarButtonItem" title="搜尋" id="lsc-o9-fQj">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="lsc-o9-fQj">
                             <connections>
                                 <segue destination="iHT-Ye-3Ts" kind="show" identifier="search_restaurant" id="7M8-G0-Ncp"/>
                             </connections>
@@ -582,30 +532,26 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <viewControllerLayoutGuide type="bottom" id="vNr-xz-0wP"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="qPs-yM-wsB">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="64" width="414" height="623"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="red_heart" translatesAutoresizingMaskIntoConstraints="NO" id="C0w-Cc-zYb">
-                                <rect key="frame" x="556" y="60" width="25" height="26"/>
-                                <animations/>
+                                <rect key="frame" x="370" y="60" width="25" height="26"/>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xYR-ht-ART">
                                 <rect key="frame" x="14" y="13" width="75" height="75"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="75" id="dfN-ME-E58"/>
                                 </constraints>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MBx-jM-swx">
-                                <rect key="frame" x="97" y="68" width="452" height="21"/>
-                                <animations/>
+                                <rect key="frame" x="97" y="68" width="266" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <color key="textColor" red="0.5" green="0.0" blue="0.5" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UCj-PJ-xzM" userLabel="button for multi shop address segue link">
                                 <rect key="frame" x="105" y="0.0" width="1" height="1"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="1" id="r4J-6X-u3y"/>
                                     <constraint firstAttribute="width" constant="1" id="uHI-Cy-y0x"/>
@@ -617,9 +563,8 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                     <segue destination="YKY-w4-OiI" kind="show" identifier="show_addresslist" id="Vp1-Xy-8iG"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="資訊下載中..." lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YL9-8h-uvm">
-                                <rect key="frame" x="97" y="18" width="489" height="30"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="249" verticalCompressionResistancePriority="749" text="downloading..." lineBreakMode="clip" numberOfLines="2" baselineAdjustment="alignBaselines" minimumFontSize="10" translatesAutoresizingMaskIntoConstraints="NO" id="YL9-8h-uvm">
+                                <rect key="frame" x="97" y="18" width="303" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="8C8-Kq-weS"/>
                                 </constraints>
@@ -628,8 +573,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cwd-BW-ldT">
-                                <rect key="frame" x="556" y="60" width="25" height="24"/>
-                                <animations/>
+                                <rect key="frame" x="370" y="60" width="25" height="24"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="25" id="vnn-3r-p99"/>
                                 </constraints>
@@ -641,8 +585,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xQJ-Ke-pEP">
-                                <rect key="frame" x="97" y="48" width="496" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="97" y="48" width="310" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="Yao-Bl-N23"/>
                                 </constraints>
@@ -651,8 +594,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="a32-zP-H0k">
-                                <rect key="frame" x="0.0" y="323" width="600" height="75"/>
-                                <animations/>
+                                <rect key="frame" x="0.0" y="459" width="414" height="75"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="waP-2y-iAl">
                                     <size key="itemSize" width="75" height="75"/>
@@ -670,16 +612,13 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="qYJ-dy-96I">
                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="75"/>
-                                                    <animations/>
                                                     <variation key="heightClass=regular" misplaced="YES">
                                                         <rect key="frame" x="0.0" y="0.0" width="50" height="50"/>
                                                     </variation>
                                                 </imageView>
                                             </subviews>
-                                            <animations/>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         </view>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstItem="qYJ-dy-96I" firstAttribute="top" secondItem="Fvw-er-44A" secondAttribute="top" id="B1y-hK-Uux"/>
                                             <constraint firstItem="qYJ-dy-96I" firstAttribute="leading" secondItem="Fvw-er-44A" secondAttribute="leading" id="Omc-5a-v3v"/>
@@ -700,8 +639,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </collectionView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QXq-r3-jqe">
-                                <rect key="frame" x="57" y="404" width="529" height="42"/>
-                                <animations/>
+                                <rect key="frame" x="57" y="540" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.60392156860000001" blue="0.70980392160000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -710,8 +648,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </variation>
                             </label>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="blue_phone" translatesAutoresizingMaskIntoConstraints="NO" id="vLK-tC-KzK">
-                                <rect key="frame" x="19" y="415" width="20" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="19" y="551" width="20" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="20" id="rUu-He-f5B"/>
                                 </constraints>
@@ -720,15 +657,13 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </variation>
                             </imageView>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="green map pin" translatesAutoresizingMaskIntoConstraints="NO" id="3J7-jE-FMf">
-                                <rect key="frame" x="19" y="456" width="20" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="19" y="592" width="20" height="20"/>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="25" y="480" width="20" height="20"/>
                                 </variation>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" minimumScaleFactor="0.5" adjustsLetterSpacingToFitWidth="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAg-io-nhY">
-                                <rect key="frame" x="57" y="445" width="529" height="42"/>
-                                <animations/>
+                                <rect key="frame" x="57" y="581" width="343" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.50588235290000005" green="0.76470588240000004" blue="0.019607843140000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -737,8 +672,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </variation>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HEn-FD-rtW">
-                                <rect key="frame" x="57" y="404" width="519" height="42"/>
-                                <animations/>
+                                <rect key="frame" x="57" y="540" width="333" height="42"/>
                                 <size key="titleShadowOffset" width="-1" height="0.0"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
@@ -752,8 +686,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8td-mt-mN4">
-                                <rect key="frame" x="57" y="445" width="522" height="42"/>
-                                <animations/>
+                                <rect key="frame" x="57" y="581" width="336" height="42"/>
                                 <state key="normal">
                                     <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
@@ -765,46 +698,28 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </button>
                             <view userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="1000" verticalHuggingPriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="MS6-ty-9AV">
-                                <rect key="frame" x="19" y="406" width="572" height="1"/>
-                                <animations/>
+                                <rect key="frame" x="19" y="542" width="386" height="1"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="469" width="600" height="1"/>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="U3b-fh-mRC">
-                                <rect key="frame" x="19" y="445" width="572" height="1"/>
-                                <animations/>
+                                <rect key="frame" x="19" y="581" width="386" height="1"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="100" y="382" width="480" height="1"/>
                                 </variation>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zSa-OD-Hnu">
-                                <rect key="frame" x="119" y="313" width="472" height="1"/>
-                                <animations/>
+                                <rect key="frame" x="119" y="449" width="286" height="1"/>
                                 <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                                 <variation key="heightClass=regular" misplaced="YES">
                                     <rect key="frame" x="0.0" y="509" width="600" height="1"/>
                                 </variation>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="適用的信用卡" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYJ-aT-jOv">
-                                <rect key="frame" x="30" y="303" width="86" height="21"/>
-                                <animations/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="86" id="W6i-q3-UC7"/>
-                                    <constraint firstAttribute="height" constant="21" id="Ymr-gc-ojb"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                                <variation key="heightClass=regular" misplaced="YES">
-                                    <rect key="frame" x="16" y="372" width="86" height="21"/>
-                                </variation>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zH6-UI-fy4">
-                                <rect key="frame" x="97" y="68" width="452" height="20"/>
-                                <animations/>
+                                <rect key="frame" x="97" y="68" width="266" height="20"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="20" id="fZX-Be-l0V"/>
                                 </constraints>
@@ -816,8 +731,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </button>
                             <webView contentMode="left" translatesAutoresizingMaskIntoConstraints="NO" id="WiU-Ov-yaB">
-                                <rect key="frame" x="14" y="101" width="572" height="194"/>
-                                <animations/>
+                                <rect key="frame" x="14" y="101" width="386" height="330"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="155" id="urM-jo-SGw"/>
@@ -831,8 +745,20 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                     <rect key="frame" x="16" y="131" width="568" height="233"/>
                                 </variation>
                             </webView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="suitable cards" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VYJ-aT-jOv">
+                                <rect key="frame" x="30" y="439" width="86" height="21"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="86" id="W6i-q3-UC7"/>
+                                    <constraint firstAttribute="height" constant="21" id="Ymr-gc-ojb"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                                <variation key="heightClass=regular" misplaced="YES">
+                                    <rect key="frame" x="16" y="372" width="86" height="21"/>
+                                </variation>
+                            </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailingMargin" secondItem="HEn-FD-rtW" secondAttribute="trailing" constant="4" id="0Rz-WA-OD5"/>
@@ -941,7 +867,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" pagingEnabled="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="hQC-0i-0JA">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="cellz" id="r3D-fw-bhH">
@@ -950,9 +875,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="r3D-fw-bhH" id="MIA-AQ-7KQ">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -961,7 +884,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="hQC-0i-0JA" firstAttribute="leading" secondItem="XOp-nn-y4l" secondAttribute="leading" id="8sN-PD-zMh"/>
@@ -979,7 +901,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="-1333.5" y="3026.5"/>
         </scene>
-        <!--餐飲優惠-->
+        <!--Dining Privileges-->
         <scene sceneID="BLG-Te-L90">
             <objects>
                 <viewController id="iHT-Ye-3Ts" customClass="restaurantsearch" sceneMemberID="viewController">
@@ -993,22 +915,20 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" apportionsSegmentWidthsByContent="YES" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="S2C-ty-ggP">
                                 <rect key="frame" x="11" y="8" width="392" height="29"/>
-                                <animations/>
                                 <segments>
-                                    <segment title="所有菜式"/>
-                                    <segment title="酒店"/>
-                                    <segment title="中菜"/>
-                                    <segment title="亞洲菜"/>
-                                    <segment title="日本菜"/>
-                                    <segment title="其他"/>
+                                    <segment title="All"/>
+                                    <segment title="Hotel"/>
+                                    <segment title="Chinese"/>
+                                    <segment title="Asian"/>
+                                    <segment title="Jap"/>
+                                    <segment title="Others"/>
                                 </segments>
                                 <connections>
                                     <action selector="cousine_input:" destination="iHT-Ye-3Ts" eventType="valueChanged" id="Jvt-BF-ImV"/>
                                 </connections>
                             </segmentedControl>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="搜尋：地區、餐廳名稱、地址" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0o-Ut-1yS">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Search: Name, Address" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="P0o-Ut-1yS">
                                 <rect key="frame" x="13" y="43" width="389" height="30"/>
-                                <animations/>
                                 <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -1018,25 +938,16 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                             </textField>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="exO-4y-50N">
                                 <rect key="frame" x="0.0" y="92" width="414" height="531"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="0.75" colorSpace="calibratedWhite"/>
                                 <view key="tableFooterView" contentMode="scaleToFill" id="Tfr-4J-bci">
                                     <rect key="frame" x="0.0" y="122" width="414" height="100"/>
                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                     <subviews>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沒有相關信用卡優惠" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-Zc-1uw">
-                                            <rect key="frame" x="131" y="41" width="153" height="21"/>
-                                            <animations/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Np2-pf-0Pv" userLabel="button holding the segue arrow. restaurant detail page">
                                             <rect key="frame" x="400" y="0.0" width="0.0" height="0.0"/>
-                                            <animations/>
                                             <constraints>
-                                                <constraint firstAttribute="width" id="NSX-oG-lce"/>
-                                                <constraint firstAttribute="height" id="aad-MU-bds"/>
+                                                <constraint firstAttribute="width" id="03s-xD-yDF"/>
+                                                <constraint firstAttribute="height" id="bB5-g4-aGe"/>
                                             </constraints>
                                             <state key="normal">
                                                 <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -1047,19 +958,22 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                         </button>
                                         <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="VK1-yp-Asb">
                                             <rect key="frame" x="197" y="42" width="20" height="20"/>
-                                            <animations/>
                                         </activityIndicatorView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Related Privileges" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HgH-Zc-1uw">
+                                            <rect key="frame" x="125" y="40" width="163" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
-                                    <animations/>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <constraints>
-                                        <constraint firstItem="Np2-pf-0Pv" firstAttribute="top" secondItem="Tfr-4J-bci" secondAttribute="top" id="4Dd-Wi-Cj3"/>
-                                        <constraint firstAttribute="trailing" secondItem="Np2-pf-0Pv" secondAttribute="trailing" constant="14" id="CUV-vt-EOY"/>
-                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="centerX" secondItem="VK1-yp-Asb" secondAttribute="centerX" id="F1h-0n-rE4"/>
-                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="centerX" secondItem="Tfr-4J-bci" secondAttribute="centerX" id="P1k-g1-8AE"/>
-                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="top" secondItem="Tfr-4J-bci" secondAttribute="top" constant="41" id="UwA-fc-gHi"/>
-                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="bottom" secondItem="VK1-yp-Asb" secondAttribute="bottom" id="nWw-ag-XWf"/>
-                                        <constraint firstItem="VK1-yp-Asb" firstAttribute="top" secondItem="Tfr-4J-bci" secondAttribute="top" constant="42" id="zVb-ww-7hD"/>
+                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="centerY" secondItem="Tfr-4J-bci" secondAttribute="centerY" id="2Hf-SL-Apg"/>
+                                        <constraint firstItem="VK1-yp-Asb" firstAttribute="top" secondItem="Tfr-4J-bci" secondAttribute="top" constant="42" id="3jp-o2-cla"/>
+                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="centerX" secondItem="VK1-yp-Asb" secondAttribute="centerX" id="8Kj-8t-1al"/>
+                                        <constraint firstItem="Np2-pf-0Pv" firstAttribute="top" secondItem="Tfr-4J-bci" secondAttribute="top" id="FLM-Dk-8MC"/>
+                                        <constraint firstItem="HgH-Zc-1uw" firstAttribute="centerX" secondItem="Tfr-4J-bci" secondAttribute="centerX" id="KIn-Ud-U8B"/>
+                                        <constraint firstAttribute="trailing" secondItem="Np2-pf-0Pv" secondAttribute="trailing" constant="14" id="qXa-PL-JGw"/>
                                     </constraints>
                                 </view>
                                 <prototypes>
@@ -1069,9 +983,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="iII-Dl-rIi" id="IB6-aT-WKB">
                                             <rect key="frame" x="0.0" y="0.0" width="381" height="99.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <segue destination="wnd-6o-SI6" kind="show" identifier="show_restaurant_details" id="irZ-1m-U6s"/>
                                         </connections>
@@ -1086,7 +998,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" red="0.93725490196078431" green="0.93725490196078431" blue="0.95686274509803926" alpha="1" colorSpace="calibratedRGB"/>
                         <gestureRecognizers/>
                         <constraints>
@@ -1103,8 +1014,8 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         </constraints>
                     </view>
                     <extendedEdge key="edgesForExtendedLayout"/>
-                    <navigationItem key="navigationItem" title="餐飲優惠" id="nTv-Tb-HLP">
-                        <barButtonItem key="rightBarButtonItem" title="搜尋" id="Nq5-pa-0El">
+                    <navigationItem key="navigationItem" title="Dining Privileges" id="nTv-Tb-HLP">
+                        <barButtonItem key="rightBarButtonItem" title="Search" id="Nq5-pa-0El">
                             <connections>
                                 <action selector="searchfield_touch:" destination="iHT-Ye-3Ts" id="PvE-py-EXJ"/>
                             </connections>
@@ -1133,10 +1044,10 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="-2580" y="949"/>
         </scene>
-        <!--新增信用卡-->
+        <!--Add A Card-->
         <scene sceneID="XoF-if-atW">
             <objects>
-                <viewController id="PED-RH-2gz" customClass="bank_search" sceneMemberID="viewController">
+                <viewController title="Add A Card" id="PED-RH-2gz" customClass="bank_search" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="0k2-Z9-uhf"/>
                         <viewControllerLayoutGuide type="bottom" id="L63-Eh-01g"/>
@@ -1147,18 +1058,15 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="69" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="udy-dU-n5Q">
                                 <rect key="frame" x="0.0" y="32" width="375" height="635"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cellz" rowHeight="70" id="YRW-CL-vt6">
                                         <rect key="frame" x="0.0" y="22" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YRW-CL-vt6" id="s8s-MK-KY3">
-                                            <rect key="frame" x="0.0" y="0.0" width="342" height="69.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="342" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <segue destination="BYZ-38-t0r" kind="show" identifier="banktocard" id="oZK-7b-AKf"/>
                                         </connections>
@@ -1172,29 +1080,27 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                     <outlet property="delegate" destination="PED-RH-2gz" id="ylX-1d-vVb"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="選擇銀行" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-HJ-PUm">
-                                <rect key="frame" x="16" y="6" width="68" height="21"/>
-                                <animations/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="choose bank" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tqo-HJ-PUm">
+                                <rect key="frame" x="16" y="6" width="105" height="21"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="21" id="qtM-4f-Tom"/>
+                                    <constraint firstAttribute="width" constant="105" id="g1V-du-VdL"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="tqo-HJ-PUm" firstAttribute="leading" secondItem="WsM-NX-c2F" secondAttribute="leadingMargin" id="1eu-4p-Fkg"/>
-                            <constraint firstItem="tqo-HJ-PUm" firstAttribute="top" secondItem="WsM-NX-c2F" secondAttribute="topMargin" constant="6" id="2yf-sZ-Ida"/>
-                            <constraint firstItem="udy-dU-n5Q" firstAttribute="top" secondItem="tqo-HJ-PUm" secondAttribute="bottom" constant="5" id="5oI-Dw-zjV"/>
-                            <constraint firstItem="udy-dU-n5Q" firstAttribute="bottom" secondItem="L63-Eh-01g" secondAttribute="top" id="hUm-lx-0u1"/>
-                            <constraint firstItem="udy-dU-n5Q" firstAttribute="leading" secondItem="WsM-NX-c2F" secondAttribute="leading" id="j5S-49-zW1"/>
-                            <constraint firstAttribute="trailing" secondItem="udy-dU-n5Q" secondAttribute="trailing" id="o21-Bh-uc0"/>
+                            <constraint firstItem="udy-dU-n5Q" firstAttribute="bottom" secondItem="L63-Eh-01g" secondAttribute="top" id="4uF-Ik-VMA"/>
+                            <constraint firstItem="tqo-HJ-PUm" firstAttribute="top" secondItem="WsM-NX-c2F" secondAttribute="topMargin" constant="6" id="73j-Q4-6iC"/>
+                            <constraint firstItem="udy-dU-n5Q" firstAttribute="top" secondItem="tqo-HJ-PUm" secondAttribute="bottom" constant="5" id="BN1-Aa-bUE"/>
+                            <constraint firstItem="udy-dU-n5Q" firstAttribute="leading" secondItem="WsM-NX-c2F" secondAttribute="leading" id="FuB-XC-HrG"/>
+                            <constraint firstItem="tqo-HJ-PUm" firstAttribute="leading" secondItem="WsM-NX-c2F" secondAttribute="leadingMargin" id="HLb-go-hRn"/>
+                            <constraint firstAttribute="trailing" secondItem="udy-dU-n5Q" secondAttribute="trailing" id="zkl-ON-dTY"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="新增信用卡" id="kQy-Xu-s45"/>
+                    <navigationItem key="navigationItem" title="Add a Card" id="kQy-Xu-s45"/>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="banksearchtableviewz" destination="udy-dU-n5Q" id="ZFv-nc-ohY"/>
@@ -1204,10 +1110,10 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="212.5" y="1821.5"/>
         </scene>
-        <!--新增信用卡-->
+        <!--Add a Card-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="cardsearch" sceneMemberID="viewController">
+                <viewController title="Add a Card" id="BYZ-38-t0r" customClass="cardsearch" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IRA-TP-iKu"/>
                         <viewControllerLayoutGuide type="bottom" id="zlO-l8-VcZ"/>
@@ -1218,7 +1124,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="70" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="yJO-D1-FUD">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell contentMode="scaleToFill" selectionStyle="none" accessoryType="detailButton" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cellz" rowHeight="80" id="ex4-wg-TSb">
@@ -1227,9 +1132,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ex4-wg-TSb" id="XJ6-Z0-u9N">
                                             <rect key="frame" x="0.0" y="0.0" width="328" height="79.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <animations/>
                                         </tableViewCellContentView>
-                                        <animations/>
                                         <connections>
                                             <segue destination="c6x-JL-qhY" kind="show" identifier="show_addcard_details" trigger="accessoryAction" id="Uxt-hm-HBb"/>
                                         </connections>
@@ -1244,7 +1147,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </connections>
                             </tableView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="yJO-D1-FUD" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="fL3-Wu-g7T"/>
@@ -1253,7 +1155,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                             <constraint firstItem="yJO-D1-FUD" firstAttribute="bottom" secondItem="zlO-l8-VcZ" secondAttribute="top" id="xkq-2J-LLZ"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="新增信用卡" id="AgV-cv-xx5">
+                    <navigationItem key="navigationItem" title="Add a Card" id="AgV-cv-xx5">
                         <barButtonItem key="rightBarButtonItem" title="儲存" id="n8e-PD-R6q">
                             <connections>
                                 <action selector="save_card:" destination="BYZ-38-t0r" id="qIs-L4-xhc"/>
@@ -1277,7 +1179,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                     <nil key="simulatedBottomBarMetrics"/>
                     <tabBar key="tabBar" contentMode="scaleToFill" translucent="NO" id="MfM-Ix-ADz">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </tabBar>
                     <connections>
@@ -1307,11 +1208,9 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 <subviews>
                                     <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="PMy-Ds-Xfp">
                                         <rect key="frame" x="290" y="234" width="20" height="20"/>
-                                        <animations/>
                                     </activityIndicatorView>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="沒有&quot;我的收藏&quot;" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V54-7g-jq7">
                                         <rect key="frame" x="242" y="229" width="117" height="21"/>
-                                        <animations/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="117" id="jq2-uv-fMn"/>
                                         </constraints>
@@ -1321,12 +1220,10 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                     </label>
                                     <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="9oP-WX-A9l">
                                         <rect key="frame" x="0.0" y="0.0" width="600" height="487"/>
-                                        <animations/>
                                         <color key="backgroundColor" white="1" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <view key="tableFooterView" contentMode="scaleToFill" id="ZCe-Kc-FXb">
                                             <rect key="frame" x="0.0" y="122" width="600" height="44"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <animations/>
                                             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                         </view>
                                         <prototypes>
@@ -1336,9 +1233,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YaA-X7-far" id="nKS-Du-6Rf">
                                                     <rect key="frame" x="0.0" y="0.0" width="600" height="99.5"/>
                                                     <autoresizingMask key="autoresizingMask"/>
-                                                    <animations/>
                                                 </tableViewCellContentView>
-                                                <animations/>
                                                 <connections>
                                                     <segue destination="wnd-6o-SI6" kind="show" identifier="fav_show_restaurant_details" id="Len-7Y-CVz"/>
                                                 </connections>
@@ -1350,7 +1245,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                         </connections>
                                     </tableView>
                                 </subviews>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <constraints>
                                     <constraint firstAttribute="trailing" secondItem="9oP-WX-A9l" secondAttribute="trailing" id="98K-vD-Gxt"/>
@@ -1364,7 +1258,6 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                 </constraints>
                             </view>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="LBt-Fc-G3Z" firstAttribute="top" secondItem="dE7-Hy-8E0" secondAttribute="bottom" id="OZY-Du-epc"/>
@@ -1387,22 +1280,20 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="-1704" y="939"/>
         </scene>
-        <!--餐飲優惠-->
+        <!--Dining Privileges-->
         <scene sceneID="6IM-t9-i4L">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="6h0-1Q-8Jw" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="餐飲優惠" image="white_food" id="ZsO-y3-AyO" customClass="P2TabBarItem"/>
+                    <tabBarItem key="tabBarItem" title="Dining Privileges" image="white_food" id="ZsO-y3-AyO" customClass="P2TabBarItem"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="5Zn-nu-JnO">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="gkv-ep-uc0">
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </toolbar>
                     <connections>
                         <segue destination="iHT-Ye-3Ts" kind="relationship" relationship="rootViewController" id="dgd-bD-eRg"/>
@@ -1412,17 +1303,16 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="-2524" y="73"/>
         </scene>
-        <!--信用卡列表-->
+        <!--Crdeit Card List-->
         <scene sceneID="sM4-3h-pYi">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j8d-if-OjL" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="信用卡列表" image="white_credit_card" id="gJT-Nl-ept" customClass="P2TabBarItem"/>
+                <navigationController title="Crdeit Card List" automaticallyAdjustsScrollViewInsets="NO" id="j8d-if-OjL" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Card List" image="white_credit_card" id="gJT-Nl-ept" customClass="P2TabBarItem"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="VKS-WX-Iqh">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1433,17 +1323,16 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
             </objects>
             <point key="canvasLocation" x="153" y="129"/>
         </scene>
-        <!--我的收藏-->
+        <!--My Fav-->
         <scene sceneID="wCu-zJ-Xe2">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="fiU-h0-Cd4" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="我的收藏" image="white_heart" selectedImage="white_heart" id="e67-EC-E0J" customClass="P2TabBarItem"/>
+                    <tabBarItem key="tabBarItem" title="My Fav" image="white_heart" selectedImage="white_heart" id="e67-EC-E0J" customClass="P2TabBarItem"/>
                     <toolbarItems/>
                     <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" translucent="NO" prompted="NO"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" id="qMU-Wk-Tan">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <animations/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
@@ -1463,20 +1352,17 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <viewControllerLayoutGuide type="bottom" id="iHb-N5-Pdq"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="YYm-0t-eLg">
-                        <rect key="frame" x="0.0" y="64" width="600" height="487"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fAM-Uc-Fct">
                                 <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
-                                <animations/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </webView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" translatesAutoresizingMaskIntoConstraints="NO" id="Ns1-KU-onE">
                                 <rect key="frame" x="-10" y="-10" width="20" height="20"/>
-                                <animations/>
                             </activityIndicatorView>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="fAM-Uc-Fct" firstAttribute="leading" secondItem="YYm-0t-eLg" secondAttribute="leading" id="1hX-Uj-jdO"/>
@@ -1544,9 +1430,9 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
         <image name="white_heart" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Len-7Y-CVz"/>
-        <segue reference="dgd-bD-eRg"/>
         <segue reference="pj9-eO-YL7"/>
         <segue reference="8Kp-ee-QBr"/>
+        <segue reference="7M8-G0-Ncp"/>
+        <segue reference="irZ-1m-U6s"/>
     </inferredMetricsTieBreakers>
 </document>

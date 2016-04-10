@@ -120,17 +120,13 @@
     [self.rotor startAnimating];
     
     //prepare search variable and textfield
+    if ([self.user_searchdistrict length]>0){
+        self.searchfieldz.text = [NSString stringWithFormat:@"District:%@",self.user_searchdistrict];
+    };
     if ([self.usersearchinput length]>0){
-        if ([self.user_searchdistrict length]>0){
-            self.searchfieldz.text = [NSString stringWithFormat:@"名稱,地址: %@   地區: %@",self.usersearchinput,self.user_searchdistrict];
-        }else{
-            self.searchfieldz.text = [NSString stringWithFormat:@"名稱、地址: %@",self.usersearchinput];
-        }
-    }else{
-        if ([self.user_searchdistrict length]>0){
-            self.searchfieldz.text = [NSString stringWithFormat:@"地區: %@",self.user_searchdistrict];
-        }
+        self.searchfieldz.text = [NSString stringWithFormat:@"%@, Name/Address:%@",self.searchfieldz.text, self.usersearchinput];
     }
+    
 }
 -(void)viewinitaltable{
     
@@ -216,7 +212,6 @@
         }else if ([self.user_searchdistrict isEqualToString:@"新界(全部)"]){
             [query whereKey:@"area" equalTo:@"新界"];
         }else if ([self.user_searchdistrict isEqualToString:@"全香港"]){
-
         }else{
             [query whereKey:@"district" equalTo:self.user_searchdistrict];
         }
@@ -227,7 +222,7 @@
     };
     
     [query orderByAscending:@"restaurant"];
-    query.limit = 100;
+    query.limit = 1000;
     [query findObjectsInBackgroundWithBlock:^(NSArray *ccobjects, NSError *error) {
         if(!error){
             for (PFObject *ccobject in ccobjects) {
@@ -235,7 +230,7 @@
                     NSInteger multishopcount = [multishop[numberofcell-1] integerValue];
                     multishop[numberofcell-1]=[NSNumber numberWithInt: (int)multishopcount + 1];
                 }else{
-                    if (numberofcell>19){
+                    if (numberofcell>99){
                         break;
                     }
                     shopz[numberofcell]=ccobject[@"restaurant"];
@@ -259,7 +254,7 @@
 
             }
             NSLog(@"numberofcell:%li lastcellinparse:%li", numberofcell, (long)lastcellinparse);
-            if (numberofcell<20)
+            if (numberofcell<100)
                 realtableend=YES;
             if (numberofcell == 0){
                 self.no_result_label.hidden=NO;
@@ -399,7 +394,7 @@
     
     [query orderByAscending:@"restaurant"];
     query.skip=lastcellinparse;
-    query.limit = 100;
+    query.limit = 1000;
     __block int startposition = (int)numberofcell;
     [query findObjectsInBackgroundWithBlock:^(NSArray *ccobjects, NSError *error) {
         if(!error){
@@ -408,7 +403,7 @@
                     NSInteger multishopcount = [multishop[numberofcell-1] integerValue];
                     multishop[numberofcell-1]=[NSNumber numberWithInt: (int)multishopcount + 1];
                 }else{
-                    if (numberofcell-startposition>19){
+                    if (numberofcell-startposition>99){
                         break;
                     }
                     shopz[numberofcell]=ccobject[@"restaurant"];
@@ -431,7 +426,7 @@
                 lastcellinparse++;
             }
             NSLog(@" numberofcell:%li lastcellinparse:%li", numberofcell, (long)lastcellinparse);
-            if ((numberofcell-startposition)<20)
+            if ((numberofcell-startposition)<100)
                 realtableend=YES;
             NSMutableArray *arrayOfIndexPaths = [[NSMutableArray alloc] init];
             NSIndexPath *insertpath = [[NSIndexPath alloc] init];
