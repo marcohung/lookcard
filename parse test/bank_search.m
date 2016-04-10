@@ -20,7 +20,6 @@
     banklistz = [[NSMutableArray alloc] init];
     banklistcnamez = [[NSMutableArray alloc] init];
     banklistlogourlz = [[NSMutableArray alloc] init];
-
     
     PFQuery *query = [PFQuery queryWithClassName:@"bank"];
     [query findObjectsInBackgroundWithBlock:^(NSArray *ccobjects, NSError *error) {    // Do something with the returned PFObject in the gameScore variable.
@@ -30,7 +29,6 @@
                 banklistz[i]=ccobject[@"bankname"];
                 banklistcnamez[i]=ccobject[@"bankchinesename"];
                 banklistlogourlz[i]=[UIImage imageNamed:ccobject[@"bankname"]];
-                                     
                 i++;
             }
             [self.banksearchtableviewz reloadData];
@@ -38,18 +36,14 @@
     }];
 }
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return banklistz.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *indicator = @"Cell";
-    // 自定儲存格類別 setup
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:indicator];
     if (cell == nil) {
-        // 載入 CustomCell.xib 檔
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
         for (UIView *view in views) {
             if ([view isKindOfClass:[CustomCell class]]) {
@@ -57,7 +51,6 @@
             }
         }
     }
-   // 填資料到右標簽
     if (banklistz.count > 0){
         cell.cellpicturez.image =banklistlogourlz[indexPath.row];
         cell.rightLabel.text = banklistcnamez[indexPath.row];
@@ -65,13 +58,11 @@
     }
     return cell;
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 68;
 }
 //segue action
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier: @"banktocard" sender: self];
 }
 // passing parameter through segue

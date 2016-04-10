@@ -23,7 +23,6 @@
     
     //passing segue parameter to local parameter
     selectedbank = _selectedbanksegue;
-
     //init variable
     listz = [[NSMutableArray alloc] init];
     listpic_urlz = [[NSMutableArray alloc] init];
@@ -87,10 +86,8 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *indicator = @"Cell";
-    // 自定儲存格類別 setup
     CardCell *cell = [tableView dequeueReusableCellWithIdentifier:indicator];
     if (cell == nil) {
-        // 載入 CustomCell.xib 檔
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CardCell" owner:nil options:nil];
         for (UIView *view in views) {
             if ([view isKindOfClass:[CardCell class]]) {
@@ -98,17 +95,13 @@
             }
         }
     }
-    // 填資料到右標簽
     if (listz.count > 0){
-
         cell.rightLabel.text = listz[indexPath.row];
         if ([listowned[indexPath.row] isEqualToString:@"YES"]){
             cell.ownedbutton.image = greentick;
         }else{
             cell.ownedbutton.image = blackadd;
         }
-//        cell.cellpicturez.image = listpicz[indexPath.row];
-        //dynamic loading restaurant image when scroll, start
         UIImage *imageFromCache = [self.imageCache objectForKey:listpicz[indexPath.row]];
         if (imageFromCache) {
             cell.cellpicturez.image = imageFromCache;
@@ -118,29 +111,22 @@
                 NSURL *imageurl = [NSURL URLWithString:listpicz[indexPath.row]];
                 UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
                 if (img != nil) {
-                    // update cache
-                    [self.imageCache setObject:img forKey:listpicz[indexPath.row]];
-                    
-                    // now update UI in main queue
-                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                    [self.imageCache setObject:img forKey:listpicz[indexPath.row]]; // update cache
+                    [[NSOperationQueue mainQueue] addOperationWithBlock:^{  // now update UI in main queue
                         // see if the cell is still visible ... it's possible the user has scrolled the cell so it's no longer visible, but the cell has been reused for another indexPath
                         CardCell *updateCell = (CardCell *)[tableView cellForRowAtIndexPath:indexPath];
-                        // if so, update the image
-                        if (updateCell) {
+                        if (updateCell) {   // if so, update the image
                             [updateCell.cellpicturez setImage:img];
                         }
                     }];
                 }
             }];
-        }
-        //dynamic loading restaurant image when scroll, end
+        }   //dynamic loading restaurant image when scroll, end
     }
     return cell;
 }
 
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     if ([listowned[indexPath.row] isEqualToString:@"YES"]){
         ownedcardcount--;
         listowned[indexPath.row] = @"NO";
@@ -149,7 +135,7 @@
             listowned[indexPath.row] = @"YES";
             ownedcardcount++;
         }else{
-            UIAlertController *cardalertcontroller = [UIAlertController alertControllerWithTitle:@"儲存上限：10張信用卡" message:@"  " preferredStyle:UIAlertControllerStyleAlert];
+            UIAlertController *cardalertcontroller = [UIAlertController alertControllerWithTitle:@"Limit：10 Cards" message:@"  " preferredStyle:UIAlertControllerStyleAlert];
             UIAlertAction *okAction = [UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler: nil];
             [cardalertcontroller addAction:okAction];
             [self presentViewController:cardalertcontroller animated:YES completion:nil];
@@ -171,16 +157,14 @@
     int i=0;
     for (NSString *eachcard in listz){
         if ([listowned[i] isEqualToString:@"YES"]){
-            // check for dulipcation
-            int flagadd = 0;
+            int flagadd = 0;    // check for dulipcation
             for (int j=0; j<arrayz.count; j++) {
                 if ([eachcard isEqualToString:[arrayz[j] objectForKey:@"card_name"]]) {
                     flagadd = 1;
                     break;
                 }
             }
-            //add card
-            if (flagadd == 0){
+            if (flagadd == 0){  //add card
                 NSDictionary *addtoarrayz = @{@"card_name":eachcard,
                                              @"card_url":listpic_urlz[i],
                                               @"card_code":listcardcode[i]};
@@ -206,19 +190,15 @@
         destViewController.selectedcardsegue = listz[indexPath.row];
     }
 }
-- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath
-{
-    
+- (void)tableView:(UITableView *)tableView accessoryButtonTappedForRowWithIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier: @"show_addcard_details" sender: indexPath];
 
 }
-- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
     return 80;
 }
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];        // Dispose of any resources that can be recreated.
 }
 
 

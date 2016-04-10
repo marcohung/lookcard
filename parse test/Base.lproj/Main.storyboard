@@ -343,7 +343,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         <viewControllerLayoutGuide type="bottom" id="h7l-nx-at6"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="SFd-7X-MBz">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <webView contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="RMy-Ya-bdn">
@@ -1156,7 +1156,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Add a Card" id="AgV-cv-xx5">
-                        <barButtonItem key="rightBarButtonItem" title="儲存" id="n8e-PD-R6q">
+                        <barButtonItem key="rightBarButtonItem" title="Save" id="n8e-PD-R6q">
                             <connections>
                                 <action selector="save_card:" destination="BYZ-38-t0r" id="qIs-L4-xhc"/>
                                 <segue destination="gdA-YO-94J" kind="show" id="pj9-eO-YL7"/>
@@ -1431,7 +1431,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="pj9-eO-YL7"/>
-        <segue reference="8Kp-ee-QBr"/>
+        <segue reference="Uxt-hm-HBb"/>
         <segue reference="7M8-G0-Ncp"/>
         <segue reference="irZ-1m-U6s"/>
     </inferredMetricsTieBreakers>
