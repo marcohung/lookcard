@@ -15,7 +15,7 @@
     [super viewDidLoad];
     NSLog(@"shops:::%@ objectid:%@",self.rest_multishop, self.rest_objectid);
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
-    self.title=@"優惠詳情";
+    self.title=@"Privileges Details";
     path = [NSString stringWithFormat:@"%@/Documents/cardmemory.plist", NSHomeDirectory()];
     plist = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     fav_rest_array = [plist objectForKey:@"fav_rest_id"];
@@ -25,14 +25,14 @@
     [query getObjectInBackgroundWithId:self.rest_objectid block:^(PFObject *rest_details, NSError *error) {
         if(!error){
             self.rest_namez.text=rest_details[@"restaurant"];
-            self.expirydatez.text=[NSString stringWithFormat:@"%@%@",@"有效期至",rest_details[@"enddate"]];
+            self.expirydatez.text=[NSString stringWithFormat:@"%@%@",@"Vaild Until:",rest_details[@"enddate"]];
             if ([self.rest_multishop integerValue]>1){
                 self.addressz.text =@"顯示分店列表";
             }else if ([rest_details[@"address"] length]>0){
                 self.addressz.text=rest_details[@"address"];
                 mapaddress=rest_details[@"address"];
             }else{
-                self.addressz.text =@"發卡銀行未有提供地址記錄";
+                self.addressz.text =@"Address is not available";
             };
             self.phonez.text=rest_details[@"tel"];
             phonenumber=[NSMutableString stringWithFormat:@"telprompt://%@",rest_details[@"tel"]];
@@ -48,7 +48,7 @@
             NSString *temps = [NSString stringWithFormat:@"%@%@",@"http://cardshk.com/cardsapp/picture/restaurant/allrestpic/",rest_details[@"picture"]];
             self.rest_picz.image=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:temps]]];
             if ([rest_details[@"remarks"] length]>0){
-                NSString *html = [NSString stringWithFormat:@"%@%@%@%@%@",@"<p>",rest_details[@"description"],@"</p><span style=\"color:#696969;\"><span style=\"font-size:14px;\">註：<br><p>",rest_details[@"remarks"],@"</span></span></p>"];
+                NSString *html = [NSString stringWithFormat:@"%@%@%@%@%@",@"<p>",rest_details[@"description"],@"</p><span style=\"color:#696969;\"><span style=\"font-size:14px;\">Remarks：<br><p>",rest_details[@"remarks"],@"</span></span></p>"];
                 [self.mywebz loadHTMLString:html baseURL:nil];
             }else{
                 NSString *html = [NSString stringWithFormat:@"%@%@%@",@"<p>",rest_details[@"description"],@"</p>"];
@@ -95,7 +95,7 @@
     if ([self.rest_multishop integerValue]>1){
         [self performSegueWithIdentifier: @"show_addresslist" sender:self];
     }else{
-        if(![self.addressz.text isEqualToString:@"發卡銀行未有提供地址記錄"]){
+        if(![self.addressz.text isEqualToString:@"Address in not available"]){
             if ([[UIApplication sharedApplication] canOpenURL:[NSURL URLWithString:@"comgooglemaps://"]]) {
                 NSString *appmapaddress=[NSString stringWithFormat:@"comgooglemaps://?q=%@",mapaddress];
                 appmapaddress = [appmapaddress stringByAddingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
@@ -114,12 +114,10 @@
     fav=!fav;
     if (fav){
         self.my_fav_pic.image=[UIImage imageNamed:@"red_heart_filled"];
- //       self.my_fav_word.text=@"已加入最愛";
         [fav_rest_array addObject:self.rest_objectid];
         
     }else{
         self.my_fav_pic.image=[UIImage imageNamed:@"red_heart"];
-  //      self.my_fav_word.text=@"加入最愛";
         [fav_rest_array removeObject:self.rest_objectid];
     }
     [plist writeToFile:path atomically:YES];

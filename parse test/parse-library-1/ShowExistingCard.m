@@ -13,8 +13,7 @@
 @implementation ShowExistingCard
 
 - (void)viewDidLoad {
-    [super viewDidLoad];
-    
+    [super viewDidLoad];    
     self.navigationItem.backBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"" style:UIBarButtonItemStylePlain target:nil action:nil];
 }
 -(void)viewDidAppear:(BOOL)animated{
@@ -33,14 +32,11 @@
     };
 }
 
-- (void)firstaction
-{
-    NSLog(@"firstaction");
+- (void)firstaction{
     listpicz = [[NSMutableArray alloc] init];
     path = [NSString stringWithFormat:@"%@/Documents/cardmemory.plist", NSHomeDirectory()];
     plist = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     arrayz = [plist objectForKey:@"card"];
-    NSLog(@"%@",arrayz);
     for (int i=0; i<arrayz.count; i++) {
         listpicz[i]=[UIImage imageWithData:[NSData dataWithContentsOfURL:[NSURL URLWithString:[arrayz[i] objectForKey:@"card_url"]]]];
     }
@@ -48,19 +44,15 @@
 }
 
 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
-{
-    self.cardcounterlabel.text = [NSString stringWithFormat:@"%@%lu%@",@"你共有 ",(unsigned long)arrayz.count,@"/10 張信用卡"];
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+    self.cardcounterlabel.text = [NSString stringWithFormat:@"%@%lu%@",@"You have added ",(unsigned long)arrayz.count,@"/10 Privilege cards"];
     return arrayz.count;
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
     static NSString *indicator = @"Cell";
-    // 自定儲存格類別 setup
     CustomCell *cell = [tableView dequeueReusableCellWithIdentifier:indicator];
     if (cell == nil) {
-        // 載入 CustomCell.xib 檔
         NSArray *views = [[NSBundle mainBundle] loadNibNamed:@"CustomCell" owner:nil options:nil];
         for (UIView *view in views) {
             if ([view isKindOfClass:[CustomCell class]]) {
@@ -68,7 +60,6 @@
             }
         }
     }
-    // 填資料到右標簽
     if (arrayz.count > 0){
         cell.cellpicturez.image = listpicz[indexPath.row];
         cell.rightLabel.text = [arrayz[indexPath.row] objectForKey:@"card_name"];
@@ -76,49 +67,40 @@
     return cell;
 }
 
-- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//    return UITableViewCellEditingStyleInsert;
+- (UITableViewCellEditingStyle)tableView:(UITableView *)tableView editingStyleForRowAtIndexPath:(NSIndexPath *)indexPath{
     return UITableViewCellEditingStyleDelete;
 }
 
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-//remove object in plist
-    [arrayz removeObjectAtIndex:indexPath.row];
+- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath{
+    [arrayz removeObjectAtIndex:indexPath.row]; //remove object in plist
     [plist writeToFile:path atomically:YES];
-//remove object in table array
-    [listpicz removeObjectAtIndex:indexPath.row];
-//remove in UI
-    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];
+    [listpicz removeObjectAtIndex:indexPath.row];//remove object in table array
+    [tableView deleteRowsAtIndexPaths:[NSArray arrayWithObject:indexPath] withRowAnimation:UITableViewRowAnimationAutomatic];//remove in UI
 }
 
 - (IBAction)editbuttonz:(UIBarButtonItem *)sender {
-    if ([self.editbuttonoutlet.title isEqualToString:@"編輯"]) {
+    if ([self.editbuttonoutlet.title isEqualToString:@"Edit"]) {
         [self.tableviewz setEditing:YES animated:YES];
-        self.editbuttonoutlet.title = @"完成";
+        self.editbuttonoutlet.title = @"Done";
     }else{
         [self.tableviewz setEditing:NO animated:YES];
-        self.editbuttonoutlet.title = @"編輯";
+        self.editbuttonoutlet.title = @"Edit";
     }
     
 }
 
-//segue to show card details view
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {  //segue to show card details view
     if ([segue.identifier isEqualToString:@"show_existcard_details"]) {
         NSIndexPath *indexPath = [self.tableviewz indexPathForSelectedRow];
         ShowCardDetails *destViewController = segue.destinationViewController;
         destViewController.selectedcardsegue = [arrayz[indexPath.row] objectForKey:@"card_name"];
     }
 }
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
     [self performSegueWithIdentifier: @"show_existcard_details" sender: self];
 }
 
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];    // Dispose of any resources that can be recreated.
 }
 @end

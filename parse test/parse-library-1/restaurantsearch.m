@@ -37,37 +37,30 @@
 }
 
 -(void)firstaction{
+    Boolean havechange = false;
     //reload page after cards are changed by user
     path = [NSString stringWithFormat:@"%@/Documents/cardmemory.plist", NSHomeDirectory()];
     plist = [NSMutableDictionary dictionaryWithContentsOfFile:path];
     NSMutableArray *newcardlistz;
     newcardlistz = [plist objectForKey:@"card"];
     if (mycardlistz.count ==0){
-        //NSLog(@"fresh start");
-        //first time running restaurant tab is executed thr here
-        mycardlistz=newcardlistz;
-        [self resettable];
-        [self viewinitaltable];
+        havechange=true;    //first time running restaurant tab is executed thr here
     }else if (newcardlistz.count>0){
         if(newcardlistz.count == mycardlistz.count){
             for (int i=0;i<newcardlistz.count;i++){
                 if (![[newcardlistz[i] objectForKey:@"card_code"] isEqualToString:[mycardlistz[i] objectForKey:@"card_code"]]) {
-                    //NSLog(@"same card count, card changed");
-                    //same number of card, card changed, reload data
-                    mycardlistz=newcardlistz;
-                    [self resettable];
-                    [self viewinitaltable];
+                    havechange=true;    //same number of card, card changed, reload data
                     break;
                 }
             }
-        }else
-        {
-            //NSLog(@"number of card changed");
-            //same number of card, card changed, reload data
-            mycardlistz=newcardlistz;
-            [self resettable];
-            [self viewinitaltable];
+        }else{
+            havechange=true;    //same number of card, card changed, reload data
         }
+    }
+    if (havechange){
+        mycardlistz=newcardlistz;
+        [self resettable];
+        [self viewinitaltable];
     }
 }
 
@@ -81,9 +74,6 @@
         cardbank = [[NSMutableArray alloc] init];
         rest_ParseObjectid = [[NSMutableArray alloc] init];
         multishop = [[NSMutableArray alloc] init];
-        self.imageOperationQueue = [[NSOperationQueue alloc]init];
-        self.imageOperationQueue.maxConcurrentOperationCount = 4;
-        self.imageCache = [[NSCache alloc] init];
     }else{
         NSMutableArray *deleteIndexPaths = [[NSMutableArray alloc] init];;
         for(int i=0;i<shopz.count;i++){
@@ -102,12 +92,10 @@
         [tv beginUpdates];
         [tv deleteRowsAtIndexPaths:deleteIndexPaths withRowAnimation:UITableViewRowAnimationFade];
         [tv endUpdates];
-        self.imageOperationQueue = [[NSOperationQueue alloc]init];
-        self.imageOperationQueue.maxConcurrentOperationCount = 4;
-        self.imageCache = [[NSCache alloc] init];
-        
     }
-    
+    self.imageOperationQueue = [[NSOperationQueue alloc]init];
+    self.imageOperationQueue.maxConcurrentOperationCount = 4;
+    self.imageCache = [[NSCache alloc] init];
     //init variable
     pagecounter = 1;
     sectiontodisplay=1;
@@ -273,7 +261,6 @@
             [self.searchtablez endUpdates];
         }
         else{
-        //    NSLog(@"ERRORRRRRR: %@, ssss,%li",error,(long)error.code);
             if(error.code==154){
                 self.no_result_label.hidden=NO;
                 self.no_result_label.text=@"查詢次數過多，請等侯30秒再試";
@@ -320,7 +307,7 @@
     [cell.cellwebz loadHTMLString:html baseURL:nil];
     cell.bankimagez.image=cardbank[indexPath.row];
     if([multishop[indexPath.row] integerValue]>1){
-        cell.celladdressz.text=@"多間分店";
+        cell.celladdressz.text=@"Multiple Branch";
     }else{
         cell.celladdressz.text=addressz[indexPath.row];
     }
@@ -335,31 +322,24 @@
             NSURL *imageurl = [NSURL URLWithString:picurl[indexPath.row]];
             UIImage *img = [UIImage imageWithData:[NSData dataWithContentsOfURL:imageurl]];
             if (img != nil) {
-                // update cache
-                [self.imageCache setObject:img forKey:picurl[indexPath.row]];
-                // now update UI in main queue
-                [[NSOperationQueue mainQueue] addOperationWithBlock:^{
+                [self.imageCache setObject:img forKey:picurl[indexPath.row]];   // update cache
+                [[NSOperationQueue mainQueue] addOperationWithBlock:^{  // now update UI in main queue
                     // see if the cell is still visible ... it's possible the user has scrolled the cell so it's no longer visible, but the cell has been reused for another indexPath
                     searchcell *updateCell = (searchcell *)[tableView cellForRowAtIndexPath:indexPath];
-                    // if so, update the image
-                    if (updateCell) {
+                    if (updateCell) {   // if so, update the image
                         [updateCell.cellpicturez setImage:img];
                     }
                 }];
             }
         }];
     }
-    //dynamic loading restaurant image when scroll, end
-    
-    return cell;
+    return cell;   //dynamic loading restaurant image when scroll, end
 }
 
-//detect the end of table and ask for extra 20 cells
+//detect the end of table and ask for extra 100 cells
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
-    
     if  (indexPath.row == (numberofcell-1)) {
-          // This is the last cell
-        if (!realtableend){
+        if (!realtableend){ // This is the last cell
             [self loadextra20];
         }
         else{
@@ -369,8 +349,7 @@
     }
 }
 
-//method that loads extra 20 cells from datebase
--(void)loadextra20
+-(void)loadextra20  //method that loads extra 100 cells from datebase
 {
     self.cousine_seg_con.enabled=NO;
     //build query to parse system
@@ -383,7 +362,6 @@
         }else if ([self.user_searchdistrict isEqualToString:@"新界(全部)"]){
             [query whereKey:@"area" equalTo:@"新界"];
         }else if ([self.user_searchdistrict isEqualToString:@"全香港"]){
-            NSLog(@"ALLLLL hk");
         }else{
             [query whereKey:@"district" equalTo:self.user_searchdistrict];
         }
@@ -430,8 +408,7 @@
                 realtableend=YES;
             NSMutableArray *arrayOfIndexPaths = [[NSMutableArray alloc] init];
             NSIndexPath *insertpath = [[NSIndexPath alloc] init];
-            for(int i = startposition ; i < numberofcell ; i++)
-            {
+            for(int i = startposition ; i < numberofcell ; i++){
                 insertpath = [NSIndexPath indexPathForRow:i inSection:0];
                 [arrayOfIndexPaths addObject:insertpath];
             }
@@ -470,19 +447,16 @@
         destViewController.usersearchinput = self.usersearchinput;
         destViewController.user_searchdistrict= self.user_searchdistrict;
     } else if ([segue.identifier isEqualToString:@"show_restaurant_details"]) {
-        //prepare data from sender
-        NSIndexPath *senderindexpath = [[NSIndexPath alloc]init];
+        NSIndexPath *senderindexpath = [[NSIndexPath alloc]init];   //prepare data from sender
         senderindexpath = sender;
-        //pass data to new view
-        restaurnat_detail_page *destViewController = segue.destinationViewController;
+        restaurnat_detail_page *destViewController = segue.destinationViewController;   //pass data to new view
         destViewController.rest_objectid = rest_ParseObjectid[senderindexpath.row];
         destViewController.rest_multishop = multishop[senderindexpath.row];
         [self.parentViewController.parentViewController dismissViewControllerAnimated:YES completion:nil];
     }
 }
 - (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+    [super didReceiveMemoryWarning];    // Dispose of any resources that can be recreated.
 }
 
 - (IBAction)cousine_input:(UISegmentedControl *)sender {
