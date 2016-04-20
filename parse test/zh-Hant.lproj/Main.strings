@@ -1,6 +1,6 @@
 
 /* Class = "UILabel"; text = "您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。\nCasear清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。\n\nCasear不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。Casear亦不保証軟體及硬體中的任何錯誤都將得到更正。\n\nCasear不保証經由或透過本應用程式購買或取得之任何商品及服務之結果。\n\nCasear不負責，亦不承擔任何一切因使用本應用程式而引致之任何意外、錯誤、遺漏、疏忽、干擾、經傳送或接收的錯誤、因下載而感染電腦病毒、誹謗、合約毀壞、版權或知識產權侵犯及所造成的任何損失。\n\nCasear不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償（即使Caesar已被告知前開賠償之可能性亦然）。\n\n本應用程式有包含第三者張貼之內容。而該內容未經Casear審批。Casear對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何Casear之意見。"; ObjectID = "0ME-OG-wLt"; */
-"0ME-OG-wLt.text" = "您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。\nCasear清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。\n\nCasear不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。Casear亦不保証軟體及硬體中的任何錯誤都將得到更正。\n\nCasear不保証經由或透過本應用程式購買或取得之任何商品及服務之結果。\n\nCasear不負責，亦不承擔任何一切因使用本應用程式而引致之任何意外、錯誤、遺漏、疏忽、干擾、經傳送或接收的錯誤、因下載而感染電腦病毒、誹謗、合約毀壞、版權或知識產權侵犯及所造成的任何損失。\n\nCasear不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償（即使Caesar已被告知前開賠償之可能性亦然）。\n\n本應用程式有包含第三者張貼之內容。而該內容未經Casear審批。Casear對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何Casear之意見。";
+"0ME-OG-wLt.text" = "您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。\nCoCo Production清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。\nCoCo Production不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。CoCo Production亦不保証軟體及硬體中的任何錯誤都將得到更正。\nCoCo Production不保証經由或透過本應用程式購買或取得之任何商品及服務之結果。\nCoCo Production不負責，亦不承擔任何一切因使用本應用程式而引致之任何意外、錯誤、遺漏、疏忽、干擾、經傳送或接收的錯誤、因下載而感染電腦病毒、誹謗、合約毀壞、版權或知識產權侵犯及所造成的任何損失。\nCoCo Production不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償。\n本應用程式有包含第三者張貼之內容。而該內容未經CoCo Production審批。CoCo Production對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何CoCo Production之意見。";
 
 /* Class = "UITableViewSection"; headerTitle = " "; ObjectID = "79J-Lw-ifd"; */
 "79J-Lw-ifd.headerTitle" = " ";
@@ -81,7 +81,7 @@
 "ZsO-y3-AyO.title" = "餐飲優惠";
 
 /* Class = "UILabel"; text = "版本 : 1.0 Build 130"; ObjectID = "d55-Ba-hnu"; */
-"d55-Ba-hnu.text" = "版本 : 1.0 Build 130";
+"d55-Ba-hnu.text" = "版本 : 1.0.18 Build 118";
 
 /* Class = "UITabBarItem"; title = "我的收藏"; ObjectID = "e67-EC-E0J"; */
 "e67-EC-E0J.title" = "我的收藏";
@@ -98,8 +98,10 @@
 /* Class = "UINavigationItem"; title = "新增信用卡"; ObjectID = "kQy-Xu-s45"; */
 "kQy-Xu-s45.title" = "新增信用卡";
 
-/* Class = "UILabel"; text = "All contents copyright 2015. All Rights reserved."; ObjectID = "lRb-Ip-qUF"; */
-"lRb-Ip-qUF.text" = "All contents copyright 2015. All Rights reserved.";
+/* Class = "UILabel"; text = "All contents copyright 2015.
+All Rights reserved."; ObjectID = "lRb-Ip-qUF"; */
+"lRb-Ip-qUF.text" = "All contents copyright 2015.
+All Rights reserved.";
 
 /* Class = "UIBarButtonItem"; title = "搜尋"; ObjectID = "lsc-o9-fQj"; */
 "lsc-o9-fQj.title" = "搜尋";
@@ -114,7 +116,7 @@
 "oGN-Ke-1p8.normalTitle" = "關於我們";
 
 /* Class = "UILabel"; text = "Title"; ObjectID = "rqE-nE-u6f"; */
-"rqE-nE-u6f.text" = "Title";
+"rqE-nE-u6f.text" = "";
 
 /* Class = "UILabel"; text = "選擇銀行"; ObjectID = "tqo-HJ-PUm"; */
 "tqo-HJ-PUm.text" = "選擇銀行";

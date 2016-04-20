@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JbZ-28-eQo">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="10116" systemVersion="15E65" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="JbZ-28-eQo">
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
@@ -263,7 +263,7 @@
                                                 <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" lineBreakMode="tailTruncation" numberOfLines="33" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="0ME-OG-wLt">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="494.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                                    <string key="text">您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。
+                                                    <mutableString key="text">您明確了解並同意您使用本應用程式的服務之風險是由您個人負擔。本資訊、產品及服務是依「現況」及「現有」基礎提供。
 CoCo Production清楚明示不提供任何明示或默示的擔保，包含但不限於商業適售性、特定目的之適用性及未侵害他人權利。
 
 CoCo Production不保証本應用程式的資訊、產品及服務將符合您的要求，或該資訊、產品及服務及其使用及取得之結果不受干擾、及時提供、正確、安全可靠或免於出錯。CoCo Production亦不保証軟體及硬體中的任何錯誤都將得到更正。
@@ -275,7 +275,7 @@ CoCo Production不負責，亦不承擔任何一切因使用本應用程式而�
 CoCo Production不承擔任何經由或透過本應用程式購買或取得之任何資訊、產品及服務，或接收之訊息，或進行之交易所衍生之替代商品及服務之購買成本，及您的傳輸或資料遭到未獲授權的存取或變造，所帶來之直接、間接、附帶、特別、衍生性或懲罰性賠償。
 
 本應用程式有包含第三者張貼之內容。而該內容未經CoCo Production審批。CoCo Production對由第三者張貼之內容所帶來之損失概不負責。本應用程式內所有內容並不反映任何CoCo Production之意見。
-</string>
+</mutableString>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                                     <nil key="highlightedColor"/>
@@ -294,7 +294,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="29.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="版本 : 1.0.16 Build 116" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d55-Ba-hnu">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="版本 : 1.0.18 Build 118" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="d55-Ba-hnu">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="29.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="10"/>
@@ -470,7 +470,7 @@ CoCo Production不承擔任何經由或透過本應用程式購買或取得之�
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqE-nE-u6f">
+                                                <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="rqE-nE-u6f">
                                                     <rect key="frame" x="15" y="0.0" width="345" height="43.5"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="16"/>

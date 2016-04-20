@@ -376,8 +376,18 @@
             [query whereKey:@"district" equalTo:self.user_searchdistrict];
         }
     };
-    if (![cousine isEqualToString:@"所有菜式"]){
-        [query whereKey:@"cousine" equalTo:cousine];
+    if ([cousine isEqualToString:@"All"]){
+        //    [query whereKey:@"cousine" equalTo:cousine];
+    }else if ([cousine isEqualToString:@"Hotel"]){
+        [query whereKey:@"cousine" equalTo:@"酒店"];
+    }else if ([cousine isEqualToString:@"Chinese"]){
+        [query whereKey:@"cousine" equalTo:@"中菜"];
+    }else if ([cousine isEqualToString:@"Asian"]){
+        [query whereKey:@"cousine" equalTo:@"亞洲菜"];
+    }else if ([cousine isEqualToString:@"Jap"]){
+        [query whereKey:@"cousine" equalTo:@"日本菜"];
+    }else if ([cousine isEqualToString:@"Others"]){
+        [query whereKey:@"cousine" equalTo:@"其他"];
     };
     
     [query orderByAscending:@"restaurant"];
